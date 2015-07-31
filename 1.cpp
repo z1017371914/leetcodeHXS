@@ -5,6 +5,7 @@ where index1 must be less than index2. Please note that your returned answers (b
 You may assume that each input would have exactly one solution.
 Input: numbers={2, 7, 11, 15}, target=9
 Output: index1=1, index2=2
+主要方法 是对数组进行排序 然后从两端分别查找
 */
 bool compare(pair<int, int>a,pair<int, int>b){
     return a.first<b.first;
