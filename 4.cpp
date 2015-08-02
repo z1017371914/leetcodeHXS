@@ -1,7 +1,9 @@
 /*找寻两个有序数组的中位数*////
 ///vector的erase用法是不是可以完善
 ///思路 先实现找到两个数组的第k个数值
-
+///如果A或者B为空，则直接返回B[k-1]或者A[k-1]；
+/*如果k为1，我们只需要返回A[0]和B[0]中的较小值；
+如果A[k/2-1]=B[k/2-1]，返回其中一个；*/
 double findKth(vector<int> nums1,vector<int> nums2,int k){
     if(nums1.size()>nums2.size())  /////每一次都假设nums1较小 不然 转换顺序
         return findKth(nums2, nums1,k);
